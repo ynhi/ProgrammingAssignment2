@@ -3,7 +3,8 @@
 
 ## makeCacheMatrix returns a list of 4 functions (set, get, setinv, getinv)
 
-makeCacheMatrix <- function(x = matrix()){ # matrix needs to be a square matrix
+makeCacheMatrix <- function(x = matrix()){ 
+        ## matrix needs to be a square matrix
         inv <- NULL
         set <- function(y) {
                 x <<- y
@@ -18,8 +19,8 @@ makeCacheMatrix <- function(x = matrix()){ # matrix needs to be a square matrix
 }
 
 ## cacheSolve looks to see if an inverse matrix is already created and stored in makeCacheMatrix.
-# If one is already created, the function will return that inverse matrix.  If it has not yet been
-# created, it will calculate the inverse matrix and store it in the makeCacheMatrix.
+## If one is already created, the function will return that inverse matrix.  If it has not yet been
+## created, it will calculate the inverse matrix and store it in the makeCacheMatrix, and return it.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
