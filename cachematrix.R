@@ -1,9 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Together, the two functions below can take in a square matrix, return its inverse, and store that inverse matrix
+## in cache, so that if the inverse of the same matrix needs to be called, there is no need to redo the calculation.
 
 ## makeCacheMatrix returns a list of 4 functions (set, get, setinv, getinv)
 
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()){ # matrix needs to be a square matrix
         inv <- NULL
         set <- function(y) {
                 x <<- y
